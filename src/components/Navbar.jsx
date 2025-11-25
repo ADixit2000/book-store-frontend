@@ -6,9 +6,7 @@ import { RiUserShared2Line } from "react-icons/ri";
 import { TbHeart } from "react-icons/tb";
 import { FaShoppingCart } from "react-icons/fa";
 import avartarImg from "../assets/avatar.png";
-import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 import { useAuth } from "../context/authContex";
 
 const navigation = [
