@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TfiGoogle } from "react-icons/tfi";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../context/authContex";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [message, setMessage] = React.useState("");
