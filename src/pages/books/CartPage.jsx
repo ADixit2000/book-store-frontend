@@ -1,12 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, redirect } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getImgUrl } from "../../utils/gettingUrl";
 import { removeFromCart } from "../../redux/features/cart/cartSlice";
 import { clearCart } from "../../redux/features/cart/cartSlice";
 import Swal from "sweetalert2";
 
 const CartPage = () => {
+  const navigate = useNavigate();
+
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
   const totalPrice = cartItems
@@ -23,7 +25,8 @@ const CartPage = () => {
 
   const handleCheckOut = () => {
     if (cartItems.length > 0) {
-      redirect("/checkout");
+      navigate("/checkout");
+      return;
     }
     Swal.fire("Empty Cart!");
   };
