@@ -7,7 +7,7 @@ import { TbHeart } from "react-icons/tb";
 import { FaShoppingCart } from "react-icons/fa";
 import avartarImg from "../assets/avatar.png";
 import { useSelector } from "react-redux";
-import { useAuth } from "../context/authContex";
+import { useAuth } from "../context/AuthContex";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
